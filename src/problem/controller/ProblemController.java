@@ -14,13 +14,14 @@ public class ProblemController
 	public void start() 
 	{
 		int count = 0;
-		while(count < 10)
+		String answer = "sample";
+		while(answer != null && !answer.equals(""))
 		{
-		display.displayMessage("Then Suddenly Words!");
+			display.displayMessage("Then Suddenly Words!");
 		
-		String answer = display.collectResponse("Are you tired?!");
+			answer = display.collectResponse("Are you tired?!");
 		
-		count++;
+			count++;
 		}
 	}
 }
