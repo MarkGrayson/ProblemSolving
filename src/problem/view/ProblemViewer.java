@@ -14,7 +14,7 @@ public class ProblemViewer
 	 * Creates a popup to show the user String.
 	 * @param message The String to show the user.
 	 */
-	public void splayMessage(String message)
+	public void displayMessage(String message)
 	{
 		JOptionPane.showMessageDialog(null, message);
 	}

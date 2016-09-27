@@ -13,7 +13,14 @@ public class ProblemController
 	
 	public void start() 
 	{
-		display.displayMessage("look words on the monitor!!!!");
+		int count = 0;
+		while(count < 10)
+		{
+		display.displayMessage("Then Suddenly Words!");
 		
+		String answer = display.collectResponse("Are you tired?!");
+		
+		count++;
+		}
 	}
 }
