@@ -1,6 +1,6 @@
 package problem.model;
 
-public class Model 
+public class Thingy 
 {
 	private String words;
 	private int number;
