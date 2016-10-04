@@ -100,7 +100,7 @@ public class ProblemController
 				display.displayMessage("The thingy at this spot has words of: " + thingyList.get(index).getWords());
 			}
 			
-			Thingy specalThingy = new Thingy();
+			Thingy specialThingy = new Thingy();
 			specialThingy.setWords("not null stuff");
 			
 			thingyList.add(1, specialThingy);
@@ -139,6 +139,12 @@ public class ProblemController
 			display.displayMessage("The size is now " + thingyList.size());
 			display.displayMessage("This is what I removed: " + old.getWords());
 			thingyList.add(0, old);
+			
+			
+			for (Thingy currentThingy : thingyList)
+			{
+				display.displayMessage("The current value is " + currentThingy.getWords());
+			}
 		}
 		
 		
