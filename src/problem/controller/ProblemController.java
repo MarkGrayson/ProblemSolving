@@ -89,7 +89,7 @@ public class ProblemController
 			thingyList.add(firstThingy);
 			display.displayMessage("This is the size of the list " + thingyList.size());
 			
-			for (int index 0; index < 5 index++)
+			for (int index = 0; index < 5; index++)
 			{
 				Thingy loopThingy = new Thingy();
 				thingyList.add(loopThingy);
@@ -99,7 +99,48 @@ public class ProblemController
 			{
 				display.displayMessage("The thingy at this spot has words of: " + thingyList.get(index).getWords());
 			}
+			
+			Thingy specalThingy = new Thingy();
+			specialThingy.setWords("not null stuff");
+			
+			thingyList.add(1, specialThingy);
+			
+			for (int index = 0; index < thingyList.size(); index++)
+			{
+				display.displayMessage("The message at " + index + " is " + thingyList.get(index).getWords());
+			}
+			
+			thingyList.get(3).setWords("I just changed what is inside");
+			Thingy tempThing = thingyList.get(4);
+			tempThing.setWords("also changed");
+			
+			for (int index = 0; index < thingyList.size(); index++)
+			{
+				display.displayMessage(thingyList.get(index).getWords());
+			}
+			
+			Thingy replacement = new Thingy();
+			replacement.setWords("I am a replicant");
+			
+			Thingy old = thingyList.set(0, replacement);
+			
+			thingyList.set(0, replacement);
+			
+			for (int index = 0; index < thingyList.size(); index++)
+			{
+				display.displayMessage(thingyList.get(index).getWords());
+			}
+			old.setWords("I  replaced :(");
+			display.displayMessage(old.getWords());
+			
+			thingyList.remove(4);
+			display.displayMessage("The size is now " + thingyList.size());
+			old = thingyList.remove(4);
+			display.displayMessage("The size is now " + thingyList.size());
+			display.displayMessage("This is what I removed: " + old.getWords());
+			thingyList.add(0, old);
 		}
+		
 		
 		
 	}
