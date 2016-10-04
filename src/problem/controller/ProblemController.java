@@ -155,6 +155,16 @@ public class ProblemController
 			{
 				display.displayMessage("The current value is " + currentThingy.getWords());
 			}
+			
+			for (Thingy currentThingy : thingyList)
+			{
+				currentThingy = new Thingy();
+			}
+			
+			for (Thingy currentThingy : thingyList)
+			{
+				thingyList.remove(0);
+			}
 		}
 		
 		
